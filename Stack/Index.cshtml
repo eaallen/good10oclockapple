@@ -1,0 +1,68 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Stack Index</title>
+</head>
+<body>
+    <!--SideBar-->
+    <div>
+        <ol>
+            <li>
+                <a href="@Url.Action("AddOne", "Stack")"
+                   class="w3-bar-item w3-button">Add One Item to Stack</a>
+            </li>
+            <li>
+                <a href="@Url.Action("HugeList", "Stack")"
+                   class="w3-bar-item w3-button">Add Huge List of Items to Stack</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Display", "Stack")"
+                   class="w3-bar-item w3-button">Display Stack</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Delete", "Stack")"
+                   class="w3-bar-item w3-button">Delete from Stack</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Clear", "Stack")"
+                   class="w3-bar-item w3-button">Clear the Stack</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Search", "Stack")"
+                   class="w3-bar-item w3-button">Search the Stack</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Return", "Stack")"
+                   class="w3-bar-item w3-button">Return to Main Menu</a>
+            </li>
+        </ol>
+
+    </div>
+   <!--This displays the MyStack when it gets something put in-->
+    @if (ViewBag.MyStack != null)
+    {
+        foreach (var sData in ViewBag.MyStack)
+        {
+            <p>@sData</p>
+        }
+    }
+
+
+    <!--This displays a search bar when the search link is clicked-->
+    @if (ViewBag.Search != null)
+    {
+        <p>@ViewBag.Search</p>
+    }
+
+
+
+
+</body>
+</html>
