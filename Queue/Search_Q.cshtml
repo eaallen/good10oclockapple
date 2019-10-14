@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Search_Q</title>
+</head>
+<body>
+    <div>
+        This is how long it took to conduct a search in the queue
+    </div>
+    <div> 
+
+        @Html.Raw((System.TimeSpan)ViewBag.StopWatch)
+    </div>
+    <div>
+        <a href='@Url.Action("Index","Queue")' class="w3-bar-item w3-button">Main Queue</a>
+    </div>
+</body>
+</html>
