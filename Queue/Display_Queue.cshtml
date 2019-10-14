@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <title>Display_Queue</title>
+</head>
+<body>
+    <div>
+        <a href='@Url.Action("Index","Queue")' class="w3-bar-item w3-button">Main Queue</a>
+    </div>
+    <div>
+        @Html.Raw((string)ViewBag.error)
+        @foreach (string squeue in ViewBag.q)
+        {
+            <p>@squeue</p>
+        }
+    </div>
+</body>
+</html>

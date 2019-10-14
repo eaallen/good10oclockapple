@@ -1,0 +1,73 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link link rel="stylesheet" href="../../Graphics/my_style.css">
+
+
+    <title>Queue</title>
+</head>
+<body>
+    <div>
+        @Html.ActionLink("Exit", "Index","Home")
+    </div>
+    <div>
+
+        <h1>Greetings</h1>
+        <h1> You are Q and you have complete power over the enterprise</h1>
+        <ul>
+            <li>
+                <a href='@Url.Action("AddOne","Queue")' class="w3-bar-item w3-button">Add one itme to Queue</a>
+            </li>
+
+            <li>
+                <a href='@Url.Action("Huge_list_add","Queue")' class="w3-bar-item w3-button">Add Huge List of Items to Queue</a>
+            </li>
+
+            <li>
+                <a href='@Url.Action("Display_Queue","Queue")' class="w3-bar-item w3-button"> Display Queue</a>
+            </li>
+
+            <li>
+                <a href='@Url.Action("Delete_one","Queue")' class="w3-bar-item w3-button">Delete from Queue</a>
+            </li>
+
+            <li>
+                <a href='@Url.Action("Clear_Queue", "Queue")' class="w3-bar-item w3-button">Clear Queue</a>
+            </li>
+
+            <li>
+                <a href='@Url.Action("Index","Home")' class="w3-bar-item w3-button">Return to Main Menu</a>
+            </li>
+        </ul>
+        <div>
+
+            @using (Html.BeginForm("Search_queue", "Queue", FormMethod.Post))
+            {
+                <p>Search Queue: @Html.TextBox("srch")</p>
+                <input type="submit" value="Submit Search" />
+            }
+
+        </div>
+        <div>
+            @if (ViewBag.q_count > 0)
+            {
+            @Html.Raw((System.TimeSpan)ViewBag.StopWatch)
+            }
+        </div>
+        <!--displays the queue-->
+        @foreach (string squeue in ViewBag.q)
+        {
+            <p>@squeue</p>
+        }
+
+    </div>
+</body>
+</html>

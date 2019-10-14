@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <title>Search_queue</title>
+</head>
+<body>
+    <div>
+        @foreach (string squeue in ViewBag.q)
+        {
+            <p>@squeue</p>
+        }
+    </div>
+</body>
+</html>
