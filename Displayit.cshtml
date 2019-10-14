@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Display it y'all</title>
+</head>
+<body>
+    <div>
+    </div>
+
+    @foreach (var sData in ViewBag.MyNary)
+    {
+        <p>@sData</p>
+    }
+</body>
+</html>

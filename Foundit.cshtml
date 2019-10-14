@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Foundit</title>
+</head>
+<body>
+    <div>
+    </div>
+    <!--Html.DisplayText("Found it")-->
+
+    <p> @Html.Raw((TimeSpan)ViewBag.StopWatch)</p>
+    <p>@Html.Raw((string)ViewBag.Found)</p>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Dictionary Index</title>
+</head>
+<body>
+    <div>
+
+        <a href="@Url.Action("AddOne", "Dictionary")"
+           class="w3-bar-item w3-button">Add One Item to Dictionary</a>
+
+        <p>
+            <a href=" @Url.Action("AddHugeList", "Dictionary")"
+               class="w3-bar-item w3-button">Add Huge List</a>
+        </p>
+
+        <p>
+            <a href=" @Url.Action("Search", "Dictionary")"
+               class="w3-bar-item w3-button">Search for Item</a>
+        </p>
+
+        <!--when you click on it, go to dictionary controller to find AddOne() method-->
+        <p>
+            <a href=" @Url.Action("Clearit", "Dictionary")"
+               class="w3-bar-item w3-button">Clear Dictionary</a>
+        </p>
+
+        <p>
+            <a href=" @Url.Action("Removeit", "Dictionary")"
+               class="w3-bar-item w3-button">Remove an item</a>
+        </p>
+
+        <p>
+            <a href=" @Url.Action("Displayit", "Dictionary")"
+               class="w3-bar-item w3-button">Display Dictionary</a>
+        </p>
+
+        <p>
+            <a href=" @Url.Action("Redirection", "Dictionary")"
+               class="w3-bar-item w3-button">Return to Homepage</a>
+        </p>
+
+
+        <p>@Html.Raw((string)ViewBag.Cant)</p>
+        <!--text>hopeful</text>-->
+
+    </div>
+
+    <!--Displays dictionary-->
+    <!--for each item (var) in the viewbag, store it to sData-->
+    <!--Then print off in a <p> tag the contents of that sData
+
+    <!--    ATforeach (var sData in ViewBag.MyNary)
+        {
+            <p>ATsData</p>
+        }
+            -->
+    <!--Hopefully for the display -->
+
+
+
+</body>
+</html>
